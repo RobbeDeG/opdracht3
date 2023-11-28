@@ -1,9 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../screens/AllMeetups'
-import ReviewDetails from '../screens/ReviewDetails'
 import { globalStyles } from '../styles/global'
 import Header from '../screens/shared/Header'
+import MeetupDetails from '../screens/MeetupDetails'
 
 const Stack = createStackNavigator()
 
@@ -17,7 +17,7 @@ const HomeStack = () => {
               component={Home} 
               options={({navigation}) => ({header: () => <Header navigation={navigation} title="Home"/> })} 
               />
-          <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+          <Stack.Screen name="MeetupDetails" component={MeetupDetails} />
       </Stack.Navigator>
   )
 }

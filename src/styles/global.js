@@ -7,19 +7,22 @@ export const globalStyles = StyleSheet.create({
         padding: 20,
     },
     titleText: {
-        // fontFamily: 'nunito-bold',
         fontWeight: 'bold',
         fontSize: 25,
         color: '#333',
+        textAlign: 'center',
     },
-    ReviewTitleText: {
+    detailTitleText: {
         fontWeight: 'bold',
+        fontStyle: 'italic',
         fontSize: 20,
-        color: '#333',
+        color: 'lightblue',
         marginTop: 20,
+        textAlign: 'center',
     },
-    reviewText:{
+    detailText:{
         fontSize: 18,
+        textAlign: 'center',
     },
     screenOptions:{                    
         headerStyle: {backgroundColor: '#f4511e'},
@@ -28,12 +31,3 @@ export const globalStyles = StyleSheet.create({
     }
 })
 
-export const images = {
-    ratings: {
-        '1': require('../../assets/1Rating.png'),
-        '2': require('../../assets/2Rating.png'),
-        '3': require('../../assets/3Rating.png'),
-        '4': require('../../assets/4Rating.png'),
-        '5': require('../../assets/5Rating.png'),
-    }
-}
