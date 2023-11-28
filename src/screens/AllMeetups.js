@@ -7,7 +7,7 @@ import { Ionicons, Entypo} from '@expo/vector-icons';
 import React, {useState} from 'react'
 import Card from './shared/Card'
 import uuid from 'react-native-uuid'
-import NewMeetup from './NewMeetup';
+import NewMeetup from './ReviewForm';
 
 
 const AllMeetups = (props) => {
