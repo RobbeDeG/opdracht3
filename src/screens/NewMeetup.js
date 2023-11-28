@@ -1,33 +1,28 @@
 import { StyleSheet, View, Button, Text} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
-import { globalStyles } from '../styles/global'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import React from 'react'
 
 const reviewSchema = Yup.object({
   title: Yup.string().required().min(4),
-  body: Yup.string().required().min(8),
-  rating: Yup.string()
-    .required()
-    .test("is-num-1-5", "Rating must be a number 1-5", (val) => {
-      return parseInt(val) < 6 && parseInt(val) > 0;
-    }),
+  address: Yup.string().required().min(4),
+  description: Yup.string().required().min(8)
 });
 
-const ReviewForm = ({ addReview }) => {
+const NewMeetup = ({ addMeetup }) => {
   return (
     <View>
       <Formik
         initialValues={{ title: "", body: "", rating: "" }}
         validationSchema={reviewSchema}
-        onSubmit={(values) => addReview(values)}
+        onSubmit={(values) => addMeetup(values)}
       >
         {(props) => (
           <View>
             <TextInput
               style={styles.input}
-              placeholder="Review title"
+              placeholder="Title"
               onChangeText={props.handleChange("title")}
               value={props.values.title}
               onBlur={props.handleBlur("title")}
@@ -38,21 +33,20 @@ const ReviewForm = ({ addReview }) => {
             <TextInput
               multiline
               style={styles.input}
-              placeholder="Review details"
-              onChangeText={props.handleChange("body")}
-              value={props.values.body}
-              onBlur={props.handleBlur("body")}
+              placeholder="Address"
+              onChangeText={props.handleChange("address")}
+              value={props.values.address}
+              onBlur={props.handleBlur("address")}
             />
             <Text style={styles.errorText}>
               {props.errors.title && props.touched.title}
             </Text>
             <TextInput
               style={styles.input}
-              placeholder="Rating (1-5)"
-              onChangeText={props.handleChange("rating")}
-              value={props.values.rating}
-              keyboardType="numeric"
-              onBlur={props.handleBlur("rating")}
+              placeholder="Description"
+              onChangeText={props.handleChange("description")}
+              value={props.values.description}
+              onBlur={props.handleBlur("description")}
             />
             <Text style={styles.errorText}>
               {props.errors.title && props.touched.title}
@@ -65,7 +59,7 @@ const ReviewForm = ({ addReview }) => {
   );
 };
 
-export default ReviewForm;
+export default NewMeetup;
 
 const styles = StyleSheet.create({
   input: {
