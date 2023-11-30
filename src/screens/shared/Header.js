@@ -5,13 +5,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { ImageBackground } from 'react-native';
 
 const Header = ({navigation, title}) => {
-    const openMenu = () => {
-        navigation.openDrawer()
-    }
-    
-  return (
+ return (
     <ImageBackground source={require("../../../assets/Background.png")}style={styles.header}>
-        <MaterialIcons name="menu" size={28} color="black" style={styles.icon} onPress={openMenu}/>
         <Image source={require("../../../assets/FadingHeart.png")} style={styles.headerImage}/>
         <Text style={styles.headerText}>{title}</Text>
     </ImageBackground>

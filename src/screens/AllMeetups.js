@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, FlatList, TouchableOpacity, Keyboard, Touchable
 import { globalStyles } from '../styles/global'
 import { Modal } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'; 
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { TouchableWithoutFeedback } from 'react-native';
 import { Ionicons, Entypo} from '@expo/vector-icons'; 
 import React, {useState} from 'react'
 import Card from './shared/Card'
@@ -48,22 +48,25 @@ const AllMeetups = (props) => {
 
   return (
     <View style={globalStyles.container}>
-      <Modal visible={modalOpen} animationType="slide">
+      <Modal visible={modalOpen}>
         <TouchableWithoutFeedback
           onPress={Keyboard.dismiss}
-        ></TouchableWithoutFeedback>
+          >
         <View>
           <MaterialIcons
             name="close"
             size={24}
             onPress={() => setModalOpen(false)}
             style={styles.modalToggle}
-          />
+            />
           <NewMeetup addMeetup={addMeetup} />
         </View>
+       </TouchableWithoutFeedback>
       </Modal>
 
+      <View style={styles.flatlistview}>
       <FlatList
+        numColumns={2}
         data={meetups}
         renderItem={({ item }) => (
             <Card>
@@ -88,6 +91,7 @@ const AllMeetups = (props) => {
             </Card>
         )}
       />
+      </View>
 
       <Entypo
         name="add-to-list"
@@ -102,9 +106,6 @@ const AllMeetups = (props) => {
 export default AllMeetups;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     modalToggle:{
         marginBottom: 10,
         borderWidth: 1,
@@ -117,4 +118,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
     },
+    flatlistview: {
+        flex: 1,
+        width: '100%',
+
+    }
  });

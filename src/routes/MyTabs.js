@@ -1,8 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import AllMeetups from '../screens/AllMeetups';
-import MeetupDetails from '../screens/MeetupDetails';
-import About from '../screens/About';
+import AboutStack from './AboutStack';
+import HomeStack from './HomeStack';
 import Header from '../screens/shared/Header';
 import HeaderDetails from '../screens/shared/HeaderDetails';
 import React from 'react';
@@ -17,8 +16,8 @@ function MyTabs() {
     <NavigationContainer>
         <Tab.Navigator>
             <Tab.Screen
-                name="All Meetups"
-                component={AllMeetups}
+                name="Home"
+                component={HomeStack}
                 options={({ navigation }) => ({
                     header: () => <Header navigation={navigation} title="All Meetups" />,
                     tabBarIcon: ({ color, size }) => (
@@ -27,18 +26,8 @@ function MyTabs() {
                 })}
             />        
             <Tab.Screen
-                name="Meetup Details"
-                component={MeetupDetails}
-                options={({ navigation }) => ({
-                    header: () => <HeaderDetails navigation={navigation} title="Meetup Details" />,
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="information-circle" size={size} color={color} />
-                    ),
-                })}
-            />
-            <Tab.Screen
                 name="About"
-                component={About}
+                component={AboutStack}
                 options={({ navigation }) => ({
                     header: () => <Header navigation={navigation} title="About" />,
                     tabBarIcon: ({ color, size }) => (

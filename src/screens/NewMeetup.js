@@ -1,5 +1,5 @@
 import { StyleSheet, View, Button, Text} from 'react-native'
-import { TextInput } from 'react-native-gesture-handler'
+import { TextInput } from 'react-native'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import React from 'react'

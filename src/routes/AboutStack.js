@@ -10,13 +10,15 @@ const Stack = createStackNavigator()
 const AboutStack = () => {
   return (
     <Stack.Navigator
-        screenOptions={globalStyles.screenOptions}
+        screenOptions={{
+            ...globalStyles.screenOptions,
+            headerShown: false
+        }}
     >
-            <Stack.Screen 
-                name="About" 
-                component={About} 
-                options={({navigation}) => ({header: () => <Header navigation={navigation} title="About"/> })} 
-                />
+        <Stack.Screen 
+            name="About" 
+            component={About} 
+        />
     </Stack.Navigator>
   )
 }

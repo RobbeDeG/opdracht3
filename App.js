@@ -6,10 +6,7 @@ import { StyleSheet, Text, View} from 'react-native';
 import { useCallback } from 'react';
 
 import MyTabs from './src/routes/MyTabs';
-import Drawernav from './src/routes/DrawerNav';
 import { NavigationContainer } from '@react-navigation/native';
-import { DrawerView } from '@react-navigation/drawer';
-import DrawerNav from './src/routes/DrawerNav';
 
 // 1. Splash screen component
 // 2. useCallBack
@@ -36,7 +33,7 @@ export default function App() {
 
     return (
     // <View style={styles.container}>
-      <DrawerNav/>
+      <MyTabs/>
     // </View>
     );
 }
