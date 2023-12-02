@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AboutStack from './AboutStack';
 import HomeStack from './HomeStack';
 import Header from '../screens/shared/Header';
-import HeaderDetails from '../screens/shared/HeaderDetails';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';

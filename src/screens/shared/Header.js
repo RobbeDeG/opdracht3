@@ -7,7 +7,7 @@ import { ImageBackground } from 'react-native';
 const Header = ({navigation, title}) => {
  return (
     <ImageBackground source={require("../../../assets/Background.png")}style={styles.header}>
-        <Image source={require("../../../assets/FadingHeart.png")} style={styles.headerImage}/>
+        <MaterialIcons name="nature-people" size={24} color="black" />        
         <Text style={styles.headerText}>{title}</Text>
     </ImageBackground>
   )

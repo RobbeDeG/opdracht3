@@ -3,7 +3,6 @@ import { globalStyles } from '../styles/global'
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import About from '../screens/About'
-import Header from '../screens/shared/Header'
 
 const Stack = createStackNavigator()
 

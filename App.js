@@ -8,17 +8,12 @@ import { useCallback } from 'react';
 import MyTabs from './src/routes/MyTabs';
 import { NavigationContainer } from '@react-navigation/native';
 
-// 1. Splash screen component
-// 2. useCallBack
-// 3. fonts
-
-// SplashScreen.preventAutoHideAsync();
+//SplashScreen.preventAutoHideAsync();
 
 
 export default function App() {
     // const [fontsLoaded] = useFonts({
-    // 'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
-    // 'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
+    // 'Dhurjati-Regular': require('./assets/fonts/Dhurjati-Regular.ttf'),
     // });
 
     // const onLayoutRootView = useCallback(async () => {
@@ -32,15 +27,16 @@ export default function App() {
     // }
 
     return (
-    // <View style={styles.container}>
+    //<View style={styles.container}>
       <MyTabs/>
-    // </View>
+    //</View>
     );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    fontFamily: 'Dhurjati-Regular',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',

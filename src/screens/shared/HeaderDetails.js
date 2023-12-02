@@ -1,7 +1,7 @@
 import { StyleSheet, Text, Image} from 'react-native'
 import React from 'react'
 import { StatusBar } from 'react-native'
-import { MaterialIcons, Ioncons } from '@expo/vector-icons'; 
+import { MaterialIcons, Ionicons } from '@expo/vector-icons'; 
 import { ImageBackground } from 'react-native';
 
 const HeaderDetails = ({navigation}) => {
@@ -11,9 +11,9 @@ const HeaderDetails = ({navigation}) => {
     
   return (
     <ImageBackground source={require("../../../assets/Background.png")}style={styles.header}>
-        <Ioncons name="arrow-back" size={28} color="black" style={styles.icon} onPress={GoBack}/>
-        <MaterialIcons name="nature-people" size={24} color="black" />        
-        <Text style={styles.headerText}>Test</Text>
+        <Ionicons name="arrow-back" size={28} color="black" style={styles.icon} onPress={GoBack}/>
+        <MaterialIcons name="nature-people" size={24} color="black" /> 
+        <Text style={styles.headerText}>Details</Text>       
     </ImageBackground>
   )
 }

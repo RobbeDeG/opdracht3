@@ -8,6 +8,7 @@ import React, {useState} from 'react'
 import Card from './shared/Card'
 import uuid from 'react-native-uuid'
 import NewMeetup from './NewMeetup';
+import { Alert } from 'react-native';
 
 
 const AllMeetups = (props) => {
@@ -23,6 +24,13 @@ const AllMeetups = (props) => {
   };
 
   const addMeetup = (review) => {
+    // Check if the address already exists in previous reviews
+    const addressExists = meetups.some((meetup) => meetup.address === review.address);
+    if (addressExists) {
+      Alert.alert("Adres bestaat al", "Er is al een meetup op dit adres!");
+      return; // Exit the function
+    }
+
     review.key = uuid.v4();
     setMeetups((currentReviews) => {
       return [review, ...currentReviews];
