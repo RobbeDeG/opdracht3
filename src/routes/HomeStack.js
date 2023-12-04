@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import AllMeetups from '../screens/AllMeetups'
 import { globalStyles } from '../styles/global'
 import Header from '../screens/shared/Header'
-import HeaderDetails from '../screens/shared/HeaderDetails'
 import MeetupDetails from '../screens/MeetupDetails'
 
 const Stack = createStackNavigator()
@@ -16,12 +15,12 @@ const HomeStack = () => {
           <Stack.Screen 
               name="All Meetups" 
               component={AllMeetups}
-              options={{ headerShown: false }} 
+              options={{headerShown: true, header: ({navigation}) => <Header title="All Meetups" navigation={navigation} /> }}
           />
           <Stack.Screen 
               name="MeetupDetails" 
               component={MeetupDetails}
-              options={{headerShown: false}}
+              options={{headerShown: true, header: ({navigation}) => <Header title="Meetup Details" navigation={navigation} />}}
           />
       </Stack.Navigator>
   )

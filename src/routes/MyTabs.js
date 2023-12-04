@@ -18,7 +18,7 @@ function MyTabs() {
                 name="Home"
                 component={HomeStack}
                 options={({ navigation }) => ({
-                    header: () => <Header navigation={navigation} title="All Meetups" />,
+                    headerShown: false,
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="list" size={size} color={color} />
                     ),

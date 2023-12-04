@@ -20,15 +20,15 @@ const AllMeetups = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const pressHandler = (item) => {
-    props.navigation.navigate("MeetupDetails", item);
+    
+    props.navigation.navigate("MeetupDetails", item, );
   };
 
   const addMeetup = (review) => {
-    // Check if the address already exists in previous reviews
     const addressExists = meetups.some((meetup) => meetup.address === review.address);
     if (addressExists) {
       Alert.alert("Adres bestaat al", "Er is al een meetup op dit adres!");
-      return; // Exit the function
+      return;
     }
 
     review.key = uuid.v4();
@@ -129,6 +129,5 @@ const styles = StyleSheet.create({
     flatlistview: {
         flex: 1,
         width: '100%',
-
     }
  });

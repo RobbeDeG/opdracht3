@@ -5,11 +5,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { ImageBackground } from 'react-native';
 
 const Header = ({navigation, title}) => {
+    console.log(navigation)
  return (
     <ImageBackground source={require("../../../assets/Background.png")}style={styles.header}>
-        {navigation === 'Details' ? (
-            <MaterialIcons name="arrow-back" size={24} color="black" onPress={() => navigation.goBack()} />,
-            <MaterialIcons name="nature-people" size={24} color="black" />
+        {title === 'Meetup Details' ? (
+            <MaterialIcons name="arrow-back" size={24} color="black" onPress={() => navigation.goBack()} />
+            // <MaterialIcons name="nature-people" size={24} color="black" />
         ) : (
             <MaterialIcons name="nature-people" size={24} color="black" />
         )}

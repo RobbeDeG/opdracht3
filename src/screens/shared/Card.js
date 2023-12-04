@@ -14,20 +14,20 @@ const Card = ( props ) => {
 export default Card
 
 const styles = StyleSheet.create({
-    card:{
-        borderRadius: 6,
-        elevation: 3,
-        backgroundColor: "#fff",
-        shadowOffset: {width: 10, height: 10},
-        shadowColor: "#333",
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        marginHorizontal: 4,
-        marginVertical: 6,
-        flex: 1,
+    card: {
+      borderRadius: 6,
+      elevation: 3,
+      backgroundColor: "#fff",
+      shadowOffset: { width: 10, height: 10 },
+      shadowColor: "#333",
+      shadowOpacity: 0.8,
+      shadowRadius: 2,
+      marginHorizontal: 4,
+      marginVertical: 6,
+      flex: 1,
     },
-    cardContent:{
-        marginHorizontal: 18,
-        marginVertical: 10,
+    cardContent: {
+      marginHorizontal: 18,
+      marginVertical: 10,
     }
 })
