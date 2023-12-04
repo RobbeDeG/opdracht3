@@ -7,7 +7,12 @@ import { ImageBackground } from 'react-native';
 const Header = ({navigation, title}) => {
  return (
     <ImageBackground source={require("../../../assets/Background.png")}style={styles.header}>
-        <MaterialIcons name="nature-people" size={24} color="black" />        
+        {navigation === 'Details' ? (
+            <MaterialIcons name="arrow-back" size={24} color="black" onPress={() => navigation.goBack()} />,
+            <MaterialIcons name="nature-people" size={24} color="black" />
+        ) : (
+            <MaterialIcons name="nature-people" size={24} color="black" />
+        )}
         <Text style={styles.headerText}>{title}</Text>
     </ImageBackground>
   )

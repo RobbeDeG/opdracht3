@@ -15,7 +15,7 @@ const AboutStack = () => {
         }}
     >
         <Stack.Screen 
-            name="About" 
+            name="Aboutscreen" 
             component={About} 
         />
     </Stack.Navigator>

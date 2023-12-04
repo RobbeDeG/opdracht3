@@ -28,7 +28,9 @@ const NewMeetup = ({ addMeetup }) => {
               onBlur={props.handleBlur("title")}
             />
             <Text style={styles.errorText}>
-              {props.errors.title && props.touched.title}
+              {props.errors.title && props.touched.title && (
+                <Text>{props.errors.title}</Text>
+              )}
             </Text>
             <TextInput
               multiline
@@ -39,7 +41,9 @@ const NewMeetup = ({ addMeetup }) => {
               onBlur={props.handleBlur("address")}
             />
             <Text style={styles.errorText}>
-              {props.errors.title && props.touched.title}
+              {props.errors.address && props.touched.address && (
+                <Text>{props.errors.address}</Text>
+              )}
             </Text>
             <TextInput
               style={styles.input}
@@ -49,7 +53,9 @@ const NewMeetup = ({ addMeetup }) => {
               onBlur={props.handleBlur("description")}
             />
             <Text style={styles.errorText}>
-              {props.errors.title && props.touched.title}
+              {props.errors.description && props.touched.description && (
+                <Text>{props.errors.description}</Text>
+              )}
             </Text>
             <Button title="Submit" color="gray" onPress={props.handleSubmit} />
           </View>

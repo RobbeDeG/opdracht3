@@ -21,7 +21,7 @@ const HomeStack = () => {
           <Stack.Screen 
               name="MeetupDetails" 
               component={MeetupDetails}
-              options={({navigation}) => ({header: () => <HeaderDetails navigation={navigation}/> })}
+              options={{headerShown: false}}
           />
       </Stack.Navigator>
   )

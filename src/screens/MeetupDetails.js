@@ -4,8 +4,6 @@ import React from 'react'
 import Card from './shared/Card'
 
 const MeetupDetails = ({route}) => {
-
-
   return (
     <View style={globalStyles.container}>
       <Card>
